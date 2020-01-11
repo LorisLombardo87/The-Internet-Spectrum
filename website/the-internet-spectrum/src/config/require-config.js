@@ -12,7 +12,7 @@ var _config = {
 (function() {
 
 
-    var _mashupPath = '/extensions' + _mashupName + '';
+    var _mashupPath = indow.location.hostname.indexOf('localhost')>=0?'/extensions':'' + _mashupName + '';
 
     require.config({
         baseUrl: (_config.isSecure ? "https://" : "http://") + _config.host + (_config.port ? ":" + _config.port : "") + _config.prefix + "resources",

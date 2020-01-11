@@ -1,0 +1,18 @@
+<div class = "row">	
+	<div class = "col-md-12">
+		<svg ng-style = "{'width': '100%', 'height': totalHeight+'px'}">
+		  
+		  <polygon ng-repeat = "($index, step) in steps" ng-attr-points="{{step.polygon}}" ng-style="{'stroke':step.strokeColor,'fill':step.color};" >
+		  	
+		  </polygon>
+
+		  <text ng-attr-fill="{{textColor}}" font-size="18" ng-repeat = "($index, step) in steps" text-anchor="middle">			  		
+		  		<tspan ng-attr-x="{{width/2}}" ng-attr-y="{{($index*(funnelHeight+linkHeight))+20}}">{{step.label}}</tspan>
+		  		<tspan ng-attr-x="{{width/2}}" ng-attr-y="{{($index*(funnelHeight+linkHeight))+40}}">{{step.value}}</tspan>
+		  </text>		  
+
+		  <polygon ng-if = "$index < (steps.length-1)" ng-repeat = "($index, step) in steps" ng-attr-points="{{step.link}}" ng-style="{'fill':'eeeeee'};" />
+		
+		</svg>
+	</div>
+</div>

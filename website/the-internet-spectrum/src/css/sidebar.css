@@ -1,0 +1,481 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url("fonts/icomoon/icomoon.eot?ixjft3");
+    src: url("fonts/icomoon/icomoon.eot?ixjft3#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.ttf?ixjft3") format("truetype"), url("fonts/icomoon/icomoon.woff?ixjft3") format("woff"), url("fonts/icomoon/icomoon.svg?ixjft3#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="sam-icon-"],
+[class*="sam-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sam-icon-baseline-search-24px:before {
+    content: "\e907";
+}
+
+.sam-icon-account-analysis:before {
+    content: "\e900";
+    color: #fff;
+}
+
+.sam-icon-clear:before {
+    content: "\e901";
+    color: #fff;
+}
+
+.sam-icon-icon-filter:before {
+    content: "\e902";
+    color: #034ea2;
+}
+
+.sam-icon-overview:before {
+    content: "\e903";
+    color: #fff;
+}
+
+.sam-icon-product-analysis:before {
+    content: "\e904";
+    color: #fff;
+}
+
+.sam-icon-retail-map:before {
+    content: "\e905";
+    color: #fff;
+}
+
+.sam-icon-micro-psi:before {
+    content: "\e906";
+    color: #fff;
+}
+.sam-icon-sma-analysis:before {
+    content: "\e908";
+    color: #fff;
+}
+
+.btn-sidebar-toggle {
+    width: 35px;
+    height: 58px;
+    margin-top: 20px;
+    padding: 5px !important;
+    background-color: #1428A0;
+    float: right;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: none;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -ms-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+    position: relative;
+}
+
+.btn-sidebar-toggle:before,
+.btn-sidebar-toggle:after {
+    border-right: 2px solid white;
+    content: '';
+    display: block;
+    height: 8px;
+    margin-top: -6px;
+    position: absolute;
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    left: 15px;
+    top: 50%;
+    width: 0;
+    -webkit-transition: 0.1s all;
+    -moz-transition: 0.1s all;
+    -ms-transition: 0.1s all;
+    -o-transition: 0.1s all;
+    transition: 0.1s all;
+}
+
+.btn-sidebar-toggle:after {
+    margin-top: -1px;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: 0.1s all;
+    -moz-transition: 0.1s all;
+    -ms-transition: 0.1s all;
+    -o-transition: 0.1s all;
+    transition: 0.1s all;
+}
+
+.btn-sidebar-toggle:hover {
+    background-color: #034EA2;
+}
+
+.btn-sidebar-toggle.open:before {
+    border-right: 2px solid white;
+    content: '';
+    display: block;
+    height: 16px;
+    margin-top: -6px;
+    position: absolute;
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    right: 28px;
+    top: 47%;
+    width: 0;
+}
+
+.btn-sidebar-toggle.open:after {
+    border-right: 2px solid white;
+    content: '';
+    display: block;
+    height: 16px;
+    margin-top: -6px;
+    top: 47%;
+    right: 28px;
+    position: absolute;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.spacer {
+    height: 60px;
+}
+
+store-sidebar {
+    width: 100%;
+}
+.sidebar-shops-container.shadow {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 
+                0 3px 6px rgba(0,0,0,0.23);
+}
+.store-order {
+    padding: 5px 0;
+    margin: 0;
+    background-color: #f8f9fa !important;
+}
+.store-order .qv-inner-object {
+    flex-direction: row !important;
+    background-color: #f8f9fa !important;
+    padding: 0 5px;
+}
+.store-order .qv-inner-object header {
+    margin-right: 5px;
+}
+.store-order .qv-object-title-text {
+    font-family: SamsungSharpSans_Bold !important;
+    background-color: #f8f9fa !important;
+    font-size: 12px;
+
+}
+
+.store-order h1 {
+    line-height: 27px !important;
+}
+
+.wrapper-sidebar-shops {
+    width: 440px;
+    height: 100%;
+    position: absolute;
+    margin-top: 50px;
+    left: -330px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    z-index: 99;
+}
+
+.wrapper-sidebar-shops.open {
+   left: 80px;
+}
+
+.sidebar-shops .store-pagination-container ul {
+    background-color: #f8f9fa!important;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0;
+    height: 100%;
+    padding: 5px;
+}
+
+.sidebar-shops .store-pagination-container ul li a {
+    color: #495057;
+    font-family: SamsungSharpSans;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.store-scroll-container {
+    background-color: white;
+    width: 100%;
+    height: 85vh;
+    overflow-y: scroll;
+    padding: 0px 0px 30px 0px;
+}
+
+.navbar-search {
+    padding: .5rem;
+    position: relative;
+}
+
+.navbar-search .form-control {
+    font-size: 12px;
+    font-family: "SamsungSharpSans_Bold";
+    height: 40px;
+    width: 100%;
+    position: relative;
+    padding-right: 30px;
+}
+
+.navbar-search .btn-icon {
+    position: absolute;
+    right: 10px;
+}
+
+
+.result {
+    text-align: right;
+    color: #5E5E5E;
+    font-family: "SamsungSharpSans_Bold";
+    font-size: 12px;
+}
+
+.result-percent {
+    text-align: right;
+    font-family: "SamsungSharpSans_Bold";
+    color: #599E09;
+    font-size: 12px;
+}
+
+.result-percent.percent-negative {
+    color: #ff0000;
+}
+
+.bollo {
+    font-family: "SamsungSharpSans_Bold";
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    width: 24px;
+    height: 24px;
+    padding-top: 6px;
+    -webkit-border-radius: 24px;
+    border-radius: 24px;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+}
+
+
+/* Green Scale */
+
+.bollo.bg-a {
+    background: #599C0C;
+}
+
+.bollo.bg-a1 {
+    background: #8DC00C;
+}
+
+.bollo.bg-a2 {
+    background: #A4DC1D;
+}
+
+
+/* YELLOW Scale */
+
+.bollo.bg-b {
+    background: #F8E71C;
+}
+
+.bollo.bg-b1 {
+    background: #F7D11E;
+}
+
+.bollo.bg-b2 {
+    background: #F6BB21;
+}
+
+
+/* ORANGE Scale */
+
+.bollo.bg-c {
+    background: #F5A623;
+}
+
+.bollo.bg-c1 {
+    background: #F57009;
+}
+
+.bollo.bg-c2 {
+    background: #DD3C06;
+}
+
+
+/* Red SCale */
+
+.bollo.bg-d {
+    background: #C50F03;
+}
+
+.bollo.bg-d1 {
+    background: #AC0116;
+}
+
+#sidebar {
+    background-color: #034EA2;
+    max-width: 80px;
+    position: fixed;
+    height: 100%;
+    padding-top: 60px;
+    z-index: 100;
+}
+
+#sidebar li {
+    padding: 0 5px;
+}
+
+#sidebar li a {
+    font-size: 12px;
+    line-height: 14px;
+    color: white;
+    margin: 30px auto 5px auto;
+    font-family: "SamsungSharpSans_Bold";
+    display: block;
+    text-align: center;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -ms-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+}
+
+#sidebar li a span {
+    font-size: 20px;
+    display: block;
+    margin: 5px 0;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -ms-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+#sidebar li a:hover {
+    text-decoration: none;
+    color: #00B3E3;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#sidebar li a:hover span {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#sidebar li a:hover span::before {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: #00B3E3;
+}
+
+#sidebar li a.active {
+    text-decoration: none;
+    color: #00B3E3;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#sidebar li a.active span {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#sidebar li a.active span::before {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: #00B3E3;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+div[qv-placeholder] {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-search-results {
+    position: absolute;
+    top: 100%;
+    width: 95%;
+    max-height: 300px;
+    overflow-y: scroll;
+    left: 10px;
+    z-index: 1000;
+    display: none;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.sidebar-search-results.open {
+    display: block !important;
+}
+
+.sidebar-search-results .search-result-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px;
+}
+
+.sidebar-search-results .search-result-item:hover {
+    background-color: #f1f1f1;
+}
+
+.sidebar-search-results .search-result-item .result-field {
+    color: #1428A0;
+    font-size: 12px;
+    font-family: SamsungSharpSans_Bold;
+}
+.sidebar-search-results .search-result-item .result-value {
+    color: #034EA2;
+    font-family: SamsungSharpSans;
+    font-size: 10x;
+}

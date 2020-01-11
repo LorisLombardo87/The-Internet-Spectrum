@@ -1,0 +1,33 @@
+sector-buttons {
+    height: 100px;
+}
+.sector-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.sector-buttons .sector-buttons-controllers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.sector-buttons .sector-buttons-controllers .sector-buttons-controllers-row {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+
+.sector-buttons .sector-buttons-clear {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}

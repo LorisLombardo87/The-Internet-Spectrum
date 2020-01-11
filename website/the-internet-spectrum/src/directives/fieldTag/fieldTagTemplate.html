@@ -1,0 +1,14 @@
+<div class = "list-selections" >
+
+	<button ng-click = "clearSelection(country)" class="btn btn-default btn-sm"  ng-repeat = "country in countrySelected" title = "Remove selection in country"> 
+		<span style = "color: #FF4337" class = "glyphicon glyphicon-remove-sign"></span> 
+		{{country.qText}}
+	</button>
+
+	<button ng-click = "clearSelection(campaign)" class="btn btn-default btn-sm" ng-repeat = "campaign in campaignSelected" title = "Remove selection in campaign">
+		<span style = "color: #FF4337" class = "glyphicon glyphicon-remove-sign"></span> 
+		{{campaign.qText}}
+	</button>
+
+	
+</div>

@@ -1,0 +1,46 @@
+<div class="sidebar-shops-container shadow">
+    <div class="sidebar-shops-search">
+        <nav class="navbar-search navbar-light bg-light">
+            <form class="form-inline" click-outside="$ctrl.resultfocus = false">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search"
+                    ng-focus="$ctrl.resultfocus = true"
+                    ng-model="$ctrl.query" 
+                    ng-model-options="{ debounce: 500 }" 
+                    ng-change="$ctrl.qlikSearch()">
+                <!-- <button class="btn-icon btn sam-icon-baseline-search-24px" type="submit"></button> -->
+                <ul class="sidebar-search-results"
+                    ng-class="{'open': $ctrl.resultfocus}"
+                    ng-if="$ctrl.searchResults.length > 0">
+                    <li class="search-result-item" 
+                        ng-repeat="item in $ctrl.searchResults" 
+                        ng-click="$ctrl.selectTerm(item)">
+                            <span class="result-field">
+                                {{item.field}}
+                            </span>
+                            <span class="result-value">
+                                {{item.value}}
+                            </span>
+                    </li>
+                </ul>
+            </form>
+        </nav>
+        <div class="store-order bg-light">
+            <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.orderFieldId" style="height: 30px"></div>
+        </div>
+        
+    </div>
+    <div class="sidebar-shops">
+
+        <div class="store-scroll-container">
+            <store-element store="store"
+                ng-repeat="store in filteredStores = ($ctrl.stores | filter: $ctrl.search) | limitTo:$ctrl.maxSize:$ctrl.maxSize*($ctrl.currentPage-1)">
+            </store-element>
+        </div>
+        <!-- <div class="store-pagination-container">
+            <ul uib-pagination boundary-link-numbers="true" rotate="false" total-items="filteredStores.length"
+                items-per-page="$ctrl.maxSize" ng-model="$ctrl.currentPage" ng-change="$ctrl.pageChanged()">
+            </ul>
+        </div> -->
+        <div class="spacer"></div>
+    </div>
+</div>

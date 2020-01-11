@@ -1,0 +1,27 @@
+<div  style = "position: absolute; top: 15px; right: 15px;
+     z-index: 1000;">
+	<span
+	ng-if = "helpPopoverContent"
+	help-popover help-popover-placement="helpPopoverPlacement" 
+	help-popover-content="helpPopoverContent"
+	help-popover-html = 'helpPopoverHtml'
+	style = "color: #7b7b7b;font-size: small;padding: 5px;" 
+	class = "glyphicon glyphicon-info-sign pull-right">
+	</span>
+
+	
+	<span
+	ng-if = "printPicture"
+	style = "color: #7b7b7b;font-size: small;padding: 5px;" 
+	class = "glyphicon glyphicon-picture pull-right"
+	ng-click = "printPictureLocal()">
+	</span>
+
+	<span
+	ng-if = "exportTable"
+	style = "color: #7b7b7b;font-size: small;padding: 5px;" 
+	class = "glyphicon glyphicon-download-alt"
+	ng-click = "exportTableLocal()">
+	</span>
+<!--class = "glyphicon glyphicon-save-file"-->
+</div>	

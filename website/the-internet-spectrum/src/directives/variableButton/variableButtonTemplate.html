@@ -1,0 +1,9 @@
+<div class="btn-group" role="group" ng-if = "buttonStyle=='buttons'">
+	<button 
+		ng-repeat = "($index,value) in valueToSelect"
+		type="button" 
+		ng-click = "clickHandler(value)" 
+		class="btn" 
+		ng-class = "{'btn-default':value != selected,'btn-info':value == selected}" 
+	>{{buttonLabel[$index]}}</button>
+</div>

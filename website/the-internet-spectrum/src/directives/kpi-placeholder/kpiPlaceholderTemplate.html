@@ -1,0 +1,45 @@
+<div class = "col-md-12" style="height:19vh">
+	<div class = "row">
+		<div class = "kpi-title">{{kpiTitle}}</div>
+	</div>
+	<div class = "row kpi-headers">
+		<div class = "col-md-3"></div>
+		<div class = "col-md-3" style="text-align:right;padding:0;height:2vh" ng-if="kpiType==1" ng-click="togglePeriod()"><img ng-show="kpiValues.length!=0" style="height:100%;" src = "./src/directives/kpi-placeholderdd/img/switch2.svg"/>{{kpiHeaders[0]}}</div>
+		<div class = "col-md-3" style="text-align:right;padding:0;height:2vh" ng-if="kpiType==2" >{{kpiHeaders[0]}}</div>
+		<div class = "col-md-3"></div>
+		<div class = "col-md-3" style="text-align:left;padding:0">{{kpiHeaders[1]}}</div>
+	</div>
+	<div class = "row kpi-detail" style="margin-top:1vh" ng-repeat = "element in kpiValues">
+		<div class = "col-md-3" style="margin-left:0; padding-left:0; text-align:center;"> <img ng-class="'kpi-row-brand-img-{{element[0].qText}}'" ng-src="./src/directives/kpi-placeholder/img/{{element[0].qText}}_logo.png"></div> <!--ng-style="{'height': element[0].qText==='Samsung' ? '.5em' : '1.2em'}" -->
+
+		<div class = "col-md-3 kpi-headers-value" style="text-align:right;padding:0">{{element[1].qText}}</div>
+
+		<div class = "col-md-3 kpi-headers-delta" style="padding: 0;" ng-show="isNumber(element[3].qNum)">
+
+			<div style="width:100%; padding:0; text-align:center;  font-size: small; " ng-if="kpiType==1">
+				<span ng-if = "(element[3].qNum > 0)"><img src = "./src/directives/kpi-placeholder/img/up.png" /> {{element[3].qText}}</span>
+				<span ng-if = "(element[3].qNum < 0)"><img src = "./src/directives/kpi-placeholder/img/down.png" /> {{element[3].qText}}</span>
+				<span ng-if = "(element[3].qNum == 0)"><img src = "./src/directives/kpi-placeholder/img/stand.png" /> {{element[3].qText}}</span>
+			</div>
+
+			<div style="width:100%; padding:0; text-align:center;" ng-if="kpiType==2">
+				<span ng-if = "(element[3].qNum > 0)"><img style="height:2.2vh" src = "./src/directives/kpi-placeholder/img/greater.svg" /></span>
+				<span ng-if = "(element[3].qNum < 0)"><img style="height:2.2vh" src = "./src/directives/kpi-placeholder/img/less.svg" /></span>
+				<span ng-if = "(element[3].qNum == 0)"><img src = "./src/directives/kpi-placeholder/img/stand.png" /></span>
+			</div>
+
+		</div>
+
+		<div class = "col-md-3" style="text-align:left;padding:0">{{element[2].qText}}</div>
+	</div>
+
+	<div ng-if="kpiValues.length==0">
+		<div class="kpi-message" STYLE="text-align: center;padding-top: 3vh;margin-bottom: 5vh;">{{kpiErrorMessage}}</div>
+	</div>
+
+	<div class = "row">
+		<div class = "kpi-footer-period">{{kpiPeriodDescription}}</div>
+		<div class = "kpi-footer" ng-style="{'width' : (kpiPeriodDescription == '') ? '100%':'50%' }">{{kpiDescription}}</div>
+	</div>
+</div>
+<div id="detailTableKPI" style="display:none"></div>

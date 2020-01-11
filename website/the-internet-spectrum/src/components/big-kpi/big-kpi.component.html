@@ -1,0 +1,26 @@
+<div class="big-kpi" ng-class="{'loading-frame': !$ctrl.bigKpi && $ctrl.loading}">
+    <span class="big-kpi-title" ng-class="{'loading-frame': !$ctrl.bigKpi && $ctrl.loading}">
+        <span ng-if="$ctrl.bigKpi">{{$ctrl.bigKpi.header}}</span>
+    </span>
+
+    <span class="big-kpi-amount" ng-class="{'loading-frame': !$ctrl.bigKpi && $ctrl.loading}">
+        <div class="big-kpi-value" ng-class="{'loading-frame': !$ctrl.bigKpi && $ctrl.loading}">
+           <span ng-if="$ctrl.bigKpi">{{$ctrl.bigKpi.value}}</span>
+        </div>
+        <div class="big-kpi-rate"  ng-class="{'loading-frame': !$ctrl.smallKpi && $ctrl.loading}">
+            <span class="big-kpi-rate-value" 
+                ng-if="$ctrl.smallKpi"
+                ng-class="{'kpi-falling': $ctrl.isNegative($ctrl.smallKpi.value)}">
+                {{$ctrl.smallKpi.value}}
+            </span>
+            <span class="big-kpi-rate-value" 
+                ng-if="!$ctrl.smallKpi"
+                ng-class="{'loading-frame': !$ctrl.smallKpi && $ctrl.loading}">
+                &nbsp;
+            </span>
+            <span class="big-kpi-rate-description" ng-class="{'loading-frame': !$ctrl.smallKpi && $ctrl.loading}">
+                <span ng-if="$ctrl.smallKpi">{{$ctrl.smallKpi.header}}</span>
+            </span>
+        </div>
+    </span>
+</div>

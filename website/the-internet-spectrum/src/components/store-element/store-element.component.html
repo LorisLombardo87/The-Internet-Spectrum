@@ -1,0 +1,66 @@
+<div class="box-shop" ng-click="$ctrl.applyStoreFilter($ctrl.store[5])">
+    <div class="box-shop-data">
+        <div class="box-shop-header">
+            <div class="region">
+                <!-- Provice - Region -->
+                {{$ctrl.store[1].value}} - {{$ctrl.store[0].value}}
+            </div>
+            <div class="box-shop-header-info ml-auto">
+                <div class="division">
+                    <!-- Division -->
+                    {{$ctrl.store[3].value}}
+                </div>
+                <!-- Cluster -->
+                <div class="bollo" 
+                    ng-if="$ctrl.store[7].value && $ctrl.store[7].value !== '-'"
+                    ng-class="{
+                    'bg-a' : $ctrl.store[7].value === 'A', 
+                    'bg-a1': $ctrl.store[7].value === 'A1', 
+                    'bg-a1': $ctrl.store[7].value === 'A2', 
+                    'bg-b' : $ctrl.store[7].value === 'B', 
+                    'bg-b1': $ctrl.store[7].value === 'B1', 
+                    'bg-b2': $ctrl.store[7].value === 'B2',
+                    'bg-c' : $ctrl.store[7].value === 'C', 
+                    'bg-c1': $ctrl.store[7].value === 'C1', 
+                    'bg-c2': $ctrl.store[7].value === 'C2', 
+                    'bg-d' : $ctrl.store[7].value === 'D',
+                }">
+                    {{$ctrl.store[7].value}}
+                </div>
+            </div>
+        </div>
+
+        <div class="box-shop-ship-to">
+            <div class="logo-shop">
+                <img ng-src="{{$ctrl.getCustomerGroupBg($ctrl.store[4].value)}}">
+            </div>
+            <div class="title-shop">
+                {{$ctrl.store[2].value}}
+            </div>
+        </div>
+        <div class="box-shop-rates justify-content-between">
+            <div>
+                <div class="subtitle-shop"
+                    ng-if="$ctrl.store[8].value">
+                    {{$ctrl.store[8].header}}
+                </div>
+                <div class="result" 
+                    ng-if="$ctrl.store[8].value">
+                    {{$ctrl.store[8].value}}
+                </div>
+            </div>
+            <div>
+                <div class="subtitle-shop subtitle-shop-dx"
+                    ng-if="$ctrl.store[11].value">
+                    {{$ctrl.store[11].header}}
+                </div>
+                <div class="result-percent"
+                    ng-if="$ctrl.store[11].value" 
+                    ng-class="{'percent-negative': !$ctrl.isPositive($ctrl.store[11].value)}">
+                    {{$ctrl.store[11].value}}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

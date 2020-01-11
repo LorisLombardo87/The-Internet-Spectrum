@@ -1,0 +1,87 @@
+<div class="filters-sidebar">
+    <div class="filters-tabs">
+        <span 
+            class="filters-tab-title" 
+            ng-repeat="(tabName, groups) in $ctrl.tabs"
+            ng-class="{'active': $ctrl.selectedTab === tabName}"
+            ng-click="$ctrl.selectTab(tabName)">
+            {{tabName}}
+        </span>
+        <span 
+            class="filters-tab-title" 
+            ng-class="{'active': $ctrl.selectedTab === 'advance'}"
+            ng-click="$ctrl.selectTab('advance')">
+            advance
+        </span>
+    </div>
+    <div class="filters-group" 
+        ng-repeat="(tabName, groups) in $ctrl.tabs" 
+        ng-if="tabName === $ctrl.selectedTab && $ctrl.selectedTab !== 'advance'">
+
+        <div class="filters-group" ng-repeat="group in groups | orderBy:'order'">
+            <span class="filters-group-title">{{group.name}}</span>
+            <div class="filter" ng-repeat="f in group.filters | orderBy:'element.order'">
+                <div qlik-app="$ctrl.qlikApp" qv-placeholder="f.id" keep-alive="true" class="{{f.element.class}}"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="filters-group" 
+        ng-if="$ctrl.selectedTab === 'advance'">
+            <div class="filter filter-custom">
+                <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.dimension.id" keep-alive="true"></div>
+            </div>
+            <div class="filter filter-custom-collapsed">
+                
+                <div class = "filters-group">
+                    <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.sellOut.expression" keep-alive="true"></div>
+                </div>
+                <div class = "filters-group">
+                    <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.confirm.id" class = "confirm-button" keep-alive="true"></div>
+                </div>
+
+            </div>
+            <div class="filter filter-custom-collapsed">
+                
+                <div class = "filters-group">
+                    <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.stock.id" keep-alive="true"></div>
+                </div>
+                <div class = "filters-group">
+                    <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.confirm.id" class = "confirm-button" keep-alive="true"></div>
+                </div>
+
+            </div>
+            <div class="filter filter-custom-collapsed">
+                
+                <div class = "filters-group">
+                    <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.wos.expression" keep-alive="true"></div>
+                </div>
+                <div class = "filters-group">
+                    <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.confirm.id" class = "confirm-button" keep-alive="true"></div>
+                </div>
+
+            </div>
+            <div class="filter filter-custom">
+                <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.select.id" keep-alive="true"></div>
+            </div>
+            <div class="filter filter-custom-collapsed">
+                <div class="filters-group">
+                    <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.sellOut.increasing" keep-alive="true"></div>
+                    <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.sellOut.decreasing" keep-alive="true"></div>        
+                </div>
+                <div class="filters-group filter-last-n-weeks">
+                    <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.sellOut.lastNWeeks" keep-alive="true"></div>
+                </div>
+            </div>
+            <div class="filter filter-custom-collapsed">
+                <div class="filters-group">
+                    <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.wos.increasing" keep-alive="true"></div>
+                    <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.wos.decreasing" keep-alive="true"></div>
+                </div>
+                <div class="filters-group filter-last-n-weeks">
+                    <div qlik-app="$ctrl.qlikApp" qv-placeholder="$ctrl.customAdvanceFilters.wos.lastNWeeks" keep-alive="true"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

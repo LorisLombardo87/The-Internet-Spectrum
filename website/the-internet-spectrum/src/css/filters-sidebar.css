@@ -1,0 +1,96 @@
+.filters-sidebar {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 
+                0 3px 6px rgba(0,0,0,0.23);
+}
+.filters-sidebar-container {
+    width: 350px;
+    right: -350px;
+    height: 100%;
+    position: absolute;
+    padding-bottom: 40px;
+    z-index: 129;
+    margin-top: 50px;
+}
+
+.filters-sidebar-container.open {
+    right: 0;
+}
+
+.filters-sidebar-container .filters-sidebar {
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+}
+
+.filters-sidebar-container .filters-sidebar .filters-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.filters-sidebar-container .filters-sidebar .filters-tabs span {
+    border-bottom: 4px solid rgba(19, 39, 157, 0.16);
+    width: 100%;
+    text-align: center;
+}
+.filters-sidebar-container .filters-sidebar .filters-tabs span:hover {
+    color: rgba(19, 39, 157, 0.16);
+}
+.filters-sidebar-container .filters-sidebar .filters-tabs span.active {
+    border-bottom: 4px solid #00b3e3;
+    color: #00b3e3;
+}
+
+.filters-sidebar-container .filters-sidebar .filters-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+.filters-sidebar-container .filters-sidebar .filters-group:last-child {
+    margin-bottom: 50px;
+}
+
+.filters-sidebar-container .filters-sidebar .filters-group .filter-standard {
+    width: 250px;
+    height: 40px;
+}
+
+.filters-sidebar-container .filters-sidebar .filters-group .filter-custom div[qv-placeholder] {
+    width: 250px;
+    height: 70px;
+}
+.filters-sidebar-container .filters-sidebar .filters-group .filter-custom-collapsed div[qv-placeholder].confirm-button {
+    height: 82px;
+}
+
+.filters-sidebar-container .filters-sidebar .filters-group .filter-custom-collapsed {
+    display: flex;
+    flex-direction: row;
+}
+
+.filters-sidebar-container .filters-sidebar .filters-group .filter-custom-collapsed div[qv-placeholder] {
+    width: 150px;
+    height: 70px;
+}
+
+.filters-sidebar-container .filters-sidebar .filters-group .filter-last-n-weeks div[qv-placeholder] {
+    width: 150px;
+    height: 120px;
+}
+
+.filters-sidebar-container .filters-sidebar .filters-group .filter-last-n-weeks .qv-object-content div:first-child,
+.filters-sidebar-container .filters-sidebar .filters-group .filter-last-n-weeks .qv-object-content div:first-child .radio {
+    height: auto !important;
+}
+
+.filters-sidebar-container .filters-sidebar .filters-group .filters-group-title,
+.filters-sidebar-container .filters-sidebar .filters-tabs {
+    color: black;
+    font: SamsungSharpSans_Bold;
+    font-weight: bold;
+}

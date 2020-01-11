@@ -1,0 +1,28 @@
+<div class="dashboard-content">
+    
+    <div class = "dashboard-header">
+        
+        <div class = "app-title">
+            The Internet Spectrum
+        </div>
+        
+        <div class="kpi-board">
+            <big-kpi-bar></big-kpi-bar>
+        </div>
+
+        <hr style="width: 100%;margin-bottom: 6px;"/>
+
+        <selections-menu></selections-menu>
+
+        <div class ="filters" style = "width: 40%;float: right;display: flex;">    
+            <div qlik-app="qlikApp" qv-placeholder="sitefilter"  style="height: 35px;width: 25%;background-color: white;"></div>
+            <div qlik-app="qlikApp" qv-placeholder="domainfilter"  style="height: 35px;width: 25%;background-color: white;"></div>
+            <div qlik-app="qlikApp" qv-placeholder="rankfilter"  style="height: 35px;width: 25%;background-color: white;"></div>
+            <div qlik-app="qlikApp" qv-placeholder="coloridfilter"  style="height: 35px;width: 25%;background-color: white;"></div>
+        </div>
+
+    </div>
+
+    <div ui-view class="mainview-animation content"></div>
+
+</div>

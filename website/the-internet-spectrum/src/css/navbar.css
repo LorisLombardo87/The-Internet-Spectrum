@@ -1,0 +1,115 @@
+.samsung-navbar {
+  position: fixed;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  color: white;
+  background-color: #1428a0;
+  font-family: SamsungSharpSans_Bold;
+  z-index: 101;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* .samsung-navbar .navbar-btn {
+  padding: 0;
+} */
+
+/* .samsung-navbar ul.navbar-nav > .active > a,
+.samsung-navbar ul.navbar-nav > .active a:focus,
+.samsung-navbar ul.navbar-nav > .active a:hover {
+  color: #f3f3f3;
+  background-color: rgba(56, 56, 56, 0.7);
+}
+
+.samsung-navbar ul.navbar-nav ul {
+  margin-top: -5px;
+}
+
+.samsung-navbar ul.navbar-nav > li > a {
+  color: #545352;
+}
+
+.samsung-navbar ul.navbar-nav > li > a:focus,
+.samsung-navbar ul.navbar-nav > li > a:hover {
+  color: #000;
+  background-color: transparent;
+} */
+
+.samsung-navbar-header {
+  height: 100%;
+}
+
+.samsung-navbar-header .btn-disable {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.logo-samsung {
+  height: 40%;
+  margin-right: 30px;
+  margin-left: 15px;
+}
+
+.samsung-navbar .filters {
+  background: white;
+  float: right;
+  height: 100%;
+  color: #1428a0;
+  max-width: 200px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 20px;
+  font-family: "SamsungSharpSans_Bold";
+}
+
+.samsung-navbar .filters span {
+  margin-right: 5px;
+}
+
+.samsung-navbar .filters:hover {
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  background-color: #1428a0;
+  color: white;
+}
+
+.samsung-navbar .filters:hover span:before {
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  color: white;
+}
+
+.samsung-navbar .page-selected {
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+}
+
+.samsung-navbar .page-selected:before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  border-right: solid 1px white;
+  right: -15px;
+  position: absolute;
+}
+
+.dashboard-content {
+    position: relative;
+    margin: 50px 0 0 80px;
+    max-width: 100%;
+    padding: 15px 5px 40px 15px;
+    height: 100vh;
+    overflow-y: scroll;
+}

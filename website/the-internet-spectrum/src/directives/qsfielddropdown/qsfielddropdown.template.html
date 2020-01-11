@@ -1,0 +1,13 @@
+<div class="dropdown horsa-dropdown">
+    <button class="btn  dropdown-toggle horsa-button" type="button" ng-click="toggle()">
+        <img style="height:1em" src="./src/directives/qsfielddropdown/img/arrow_up.svg"  ng-show="expanded" ></img>
+        <img style="height:1em" src="./src/directives/qsfielddropdown/img/arrow_down.svg"  ng-show="!expanded"></img>
+        {{selection | uppercase}}
+    </button>
+</div>
+<ul class="list-group dd-field-container"  ng-style="{'height': ddMaxHeight}" ng-show="expanded">
+    <li class="list-group-item p-2" ng-repeat="value in fieldValues" ng-class="{'list-group-item-secondary': value.alternative}" ng-click="selectValue()">
+        <img class="" style="height:1em" src="./src/directives/qsfielddropdown/img/checked.svg" ng-class="{'droddown-checked': value.selected, 'droddown-unchecked':!value.selected}"></img>
+        <span>{{value.data | uppercase}}</span>
+    </li>
+</ul>

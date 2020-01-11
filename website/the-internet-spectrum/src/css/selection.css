@@ -1,0 +1,39 @@
+.active-selections {
+    display: inline-flex;
+    flex-direction: row;
+    width: 60%
+}
+
+.active-selections .selection {
+    min-width: 108px;
+    min-height: 22px;
+    border-radius: 2px;
+    background-color: #086788;
+    margin-right: 5px;
+    padding: 0 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+.active-selections .selection .selection-title { 
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.active-selections .selection .selection-remove {
+    color: #ffffff;
+    cursor: pointer;
+    bottom: -2px;
+    position: relative;
+    margin: 0 5px;
+}
+

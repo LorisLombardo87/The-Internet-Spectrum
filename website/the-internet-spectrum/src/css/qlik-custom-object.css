@@ -1,0 +1,60 @@
+.qlik-object-container .qv-object .qv-object-title .qv-object-title-text {
+  font-family: SamsungSharpSans_Bold !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+  color: #034ea2 !important;
+  white-space: nowrap !important;
+}
+
+.qlik-object-container header {
+  display: none;
+}
+
+.qv-object.qv-selections-active {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.qv-object-variable .material input,
+.qv-object-variable .material select {
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0) !important;
+}
+
+.qv-object-variable input[type="range"] {
+  top: 0px !important;
+}
+
+.qv-white-button .qv-inner-object {
+    background-color: transparent !important;
+}
+.qv-white-button .lui-button--default {
+    background-color: white !important;
+}
+
+.qv-button-horizontal {
+  padding: 5px 0;
+  margin: 0;
+  background-color: #f8f9fa !important;
+}
+.qv-button-horizontal .qv-inner-object {
+  flex-direction: row !important;
+  background-color: #f8f9fa !important;
+  padding: 0 5px;
+}
+.qv-button-horizontal .qv-inner-object header {
+  margin-right: 5px;
+  padding: 5px 0 !important;
+}
+.qv-button-horizontal .qv-object-title-text {
+  font-family: SamsungSharpSans_Bold !important;
+  background-color: #f8f9fa !important;
+  font-size: 12px;
+
+}
+
+.qv-button-horizontal h1 {
+  line-height: 27px !important;
+}
